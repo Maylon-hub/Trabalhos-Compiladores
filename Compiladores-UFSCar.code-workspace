@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../compiladores-corretor-automatico"
+		},
+		{
+			"path": "../T1-CC"
+		},
+		{
+			"path": "../cursocompiladores"
+		},
+		{
+			"path": "H:/Meu Drive/Shared Fold UFSCar/BCC/2026-1/CC/casos-de-teste"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}
