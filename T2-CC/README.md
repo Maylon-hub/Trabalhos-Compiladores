@@ -19,11 +19,12 @@ Este diretório contém a implementação do Analisador Sintático para a lingua
 ## Como Executar
 
 1. Instale as dependências:
+
    ```bash
    pip install -r requirements.txt
    ```
-
 2. Execute o analisador:
+
    ```bash
    python main.py <arquivo_entrada> <arquivo_saida>
    ```
@@ -31,9 +32,11 @@ Este diretório contém a implementação do Analisador Sintático para a lingua
 ## Implementação Interna
 
 ### Tratamento de Erros
+
 A classe `CustomErrorListener` em `main.py` intercepta falhas de reconhecimento do ANTLR e as converte no formato:
 `Linha X: erro sintatico proximo a <lexema>`
 
 ### Ordem de Análise
+
 1. **Passada Léxica:** Verifica se existem erros do T1 (símbolos inválidos, comentários ou cadeias não fechadas). Se houver, imprime o erro e encerra.
 2. **Passada Sintática:** Caso a léxica passe, reinicia o fluxo e executa o Parser para validar a estrutura gramatical.
