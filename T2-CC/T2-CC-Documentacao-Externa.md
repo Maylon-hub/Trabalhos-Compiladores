@@ -3,7 +3,8 @@
 ## Relatório Técnico
 
 **Grupo:**
-- RA: 800199
+- Maylon Martins de Melo - 800199
+- Eduardo Eudoro Lemos de Oliveira - 824757
 
 ### 1. Introdução
 Este trabalho consistiu no desenvolvimento de um analisador sintático para a linguagem LA (Linguagem Algorítmica). O objetivo principal foi evoluir o analisador léxico desenvolvido no Trabalho 1 para um sistema capaz de validar a estrutura gramatical do código-fonte, reportando erros de sintaxe de acordo com as especificações da disciplina.
