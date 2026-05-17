@@ -1,0 +1,35 @@
+canvas 32 x 32 background #1E1E1E
+
+palette {
+    red = #FF5555
+    green = #50FA7B
+    blue = #8BE9FD
+    yellow = #F1FA8C
+    white = #F8F8F2
+    black = #000000
+}
+
+draw {
+    // Corpo
+    rect (10, 10) to (22, 22) blue
+    
+    // Olhos
+    pixel (13, 14) white
+    pixel (19, 14) white
+    pixel (13, 15) white
+    pixel (19, 15) white
+    
+    // Pupilas
+    pixel (14, 15) black
+    pixel (18, 15) black
+    pixel (14, 14) black
+    pixel (18, 14) black
+
+    // Sorriso
+    line (14, 19) to (18, 19) red
+    pixel (13, 18) red
+    pixel (19, 18) red
+
+    // Um pequeno sol no fundo
+    circle center (28, 4) radius 3 yellow
+}

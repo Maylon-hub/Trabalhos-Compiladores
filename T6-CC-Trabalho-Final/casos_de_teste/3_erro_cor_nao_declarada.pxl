@@ -1,0 +1,9 @@
+canvas 32 x 32 background #1E1E1E
+
+palette {
+    red = #FF5555
+}
+
+draw {
+    pixel (10, 10) blue // ERRO: 'blue' nao declarada
+}

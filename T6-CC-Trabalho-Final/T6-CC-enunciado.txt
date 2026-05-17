@@ -1,0 +1,78 @@
+﻿Construção de Compiladores
+Daniel Lucrédio
+Especificação e Critérios de notas do Trabalho 6
+(Última revisão: mar/2026)
+
+
+O trabalho 6 (T6) da disciplina consiste em implementar um compilador completo para uma linguagem de sua escolha. Não é necessário implementar uma linguagem de programação completa (como LA, ou Alguma). Na verdade, isso não é recomendável, dado que irá tomar muito tempo. A ideia é criar uma linguagem pequena, de preferência declarativa, para alguma aplicação específica de interesse dos estudantes. O único requisito é que o compilador tenha:
+- Análise léxica + sintática: em outras palavras, uma gramática;
+- Análise semântica: três ou quatro (ou mais) verificações de conformidade que não são feitas pela gramática;
+- Geração de código ou interpretação: algo de útil ou interessante feito com a linguagem.
+
+
+Por exemplo, uma linguagem para escrita de melodias teria:
+- Análise léxica + sintática: uma gramática para escrita de notas, acidentes, frases, compassos musicais, refrões, trilhas de instrumentos, etc;
+- Análise semântica: verificação de número máximo de notas por compasso, verificação de adequação das notas com o tom da melodia, verificação da duração das notas em relação a uma frase, reutilização de refrões por meio de nomes, etc;
+- Geração de código: geração de código MIDI para ser reproduzido em um player; ou
+- Interpretação: execução da música usando uma biblioteca de sons.
+
+
+Recomenda-se que os estudantes já comecem a pensar na linguagem com antecedência, de preferência desde o início da disciplina, para poder discutir com o professor sua viabilidade, complexidade, tamanho, etc.
+
+
+Algumas ideias já executadas por alunos em outras ofertas da disciplina podem ser encontradas no repositório do curso.
+
+
+A linguagem pode também ser uma adaptação ou evolução de uma linguagem existente, desde que:
+* A fonte (documentação original) seja citada; e
+* As diferenças entre a proposta dos estudantes e a linguagem original estejam claras.
+
+
+Exemplos: https://github.com/antlr/grammars-v4
+
+
+Os estudantes são livres para escolher a tecnologia que quiserem para implementar o compilador, mas recomenda-se fortemente utilizar um gerador de parser.
+
+
+________________
+
+
+Critérios de avaliação do Trabalho 6 e descontos nas notas
+
+
+O trabalho 6 deve ser desenvolvido em grupos de até 3 estudantes (máximo).
+
+
+A nota do trabalho 6 será composta de 4 parcelas, cada uma valendo de 0 a 10, conforme o conteúdo exigido para o trabalho, e com os pesos assim distribuídos:
+
+
+ALS - Análise léxica/sintática: 25%
+AS - Análise semântica: 25%
+GCI - Geração de código ou interpretação: 25%
+E - Entrega: 25%
+
+
+ALS - Análise léxica/sintática: seu compilador deve fazer a análise léxica e sintática da linguagem projetada. Normalmente, basta projetar a gramática corretamente, e o gerador de parser faz o resto. IMPORTANTE: forneça exemplos e casos de teste para demonstrar que a análise léxica e sintática está funcionando!
+
+
+AS - Análise semântica: seu compilador deve realizar algum tipo de análise semântica (que vai além da análise léxica/sintática), como checagem de consistência, tipos, qualquer coisa vale. Normalmente, basta enriquecer a gramática com alguma verificação adicional. Implemente um mínimo de 3 ou 4 verificações (dependendo da complexidade pode ser mais do que isso, o professor irá acompanhar os grupos nesse sentido). IMPORTANTE: forneça exemplos e casos de teste para demonstrar que a análise semântica está funcionando!
+
+
+GCI - Geração de código ou interpretação: seu compilador deve fazer algo de "útil" após a análise, seja gerando código ou interpretando os programas. IMPORTANTE: forneça exemplos e casos de teste para demonstrar que a geração de código ou interpretação está funcionando!
+
+
+Obs: em todos os itens anteriores, os exemplos e casos de teste não serão os únicos critérios para avaliação. O professor irá modificar alguns e criar outros para realmente testar seu compilador.
+
+
+E - Entrega: os estudantes deverão criar um repositório em um sistema de controle de versões (ex: GitHub, GitLab, etc) para disponibilizar seu trabalho, de preferência em formato de código aberto. Deve ser um repositório auto-descritivo, contendo:
+* Um vídeo curto demonstrativo para "vender" a sua linguagem. Explicando para que ela serve, e como utilizá-la
+* Descrição detalhada, possibilitando qualquer um compreender do que se trata a linguagem/compilador, e descrição de como utilizar a linguagem/compilador. Coloque essa documentação em um arquivo README.md (padrão do GitHub), seguindo o formato Markdown (https://www.markdownguide.org/basic-syntax/).
+* Devem ser fornecidos exemplos de uso (casos de teste) para a linguagem/compilador
+* Descrição de como compilar o compilador, para possibilitar que outras pessoas possam modificar seu código
+* Todo o código-fonte, incluindo a gramática, deve ser documentado
+
+
+Caso algum aluno não queira colocar de forma pública, configurar o repositório como privado e adicionar o professor para ter acesso. No entanto, recomenda-se deixar público para que este projeto faça parte do portfolio do aluno no curso.
+
+
+Para entregar ao professor, basta que um membro do grupo informe o link do repositório na respectiva atividade do AVA, em forma de comentário na atividade de entrega.

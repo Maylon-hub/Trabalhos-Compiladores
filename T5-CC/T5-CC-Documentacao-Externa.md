@@ -7,7 +7,7 @@
 
 ## 1. Introdução
 
-Este relatório documenta a arquitetura e a implementação da fase final (T5) do compilador da Linguagem Algorítmica (LA). Nesta etapa, desenvolvemos o **Gerador de Código C** (`CodeGeneratorVisitor.py`), responsável por traduzir os nós validados da Árvore de Sintaxe Abstrata (AST) para um código fonte C compilável e semanticamente idêntico. 
+Este relatório documenta a arquitetura e a implementação da fase final (T5) do compilador da Linguagem Algorítmica (LA). Nesta etapa, desenvolvemos o **Gerador de Código C** (`CodeGeneratorVisitor.py`), responsável por traduzir os nós validados da Árvore de Sintaxe Abstrata (AST) para um código fonte C compilável e semanticamente idêntico.
 
 O compilador opera em fases integradas: primeiro valida a estrutura léxica, depois a sintática, em seguida a semântica (reportando erros de tipos, escopos e assinaturas) e, se não houver erros semânticos, prossegue para a geração de código.
 

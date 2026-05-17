@@ -1,0 +1,13 @@
+canvas 32 x 32 background #1E1E1E
+
+palette {
+    red = #FF5555
+}
+
+draw {
+    // ERRO: X=35 excede a largura (32)
+    pixel (35, 10) red
+    
+    // ERRO: circulo com centro em 2, raio 5 escapa os limites negativos
+    circle center (2, 2) radius 5 red
+}

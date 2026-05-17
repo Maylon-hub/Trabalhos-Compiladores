@@ -1,0 +1,11 @@
+canvas 32 x 32 background #1E1E1E
+
+palette {
+    red = #FF5555
+    blue = #8BE9FD
+    red = #FF0000 // ERRO: cor 'red' ja declarada
+}
+
+draw {
+    pixel (10, 10) red
+}
