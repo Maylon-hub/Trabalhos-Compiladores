@@ -1,6 +1,6 @@
-# Compilador LA - Analisador Semântico Avançado (T4)
+# Compilador LA - Gerador de Código C (T5)
 
-Este projeto implementa o Analisador Semântico Avançado para a Linguagem Algorítmica (LA), desenvolvido como parte do Trabalho 4 da disciplina de Compiladores (DC/UFSCar).
+Este projeto implementa o Gerador de Código C completo para a Linguagem Algorítmica (LA), desenvolvido como parte do Trabalho 5 da disciplina de Compiladores (DC/UFSCar).
 
 ## Membros do Grupo
 
@@ -12,6 +12,7 @@ Este projeto implementa o Analisador Semântico Avançado para a Linguagem Algor
 - Python 3
 - ANTLR4 Python3 Runtime (`antlr4-python3-runtime==4.13.2`)
 - Java JRE (para executar a geração do ANTLR4 e o corretor automático)
+- GCC Compiler (instalável via MinGW ou Chocolatey `choco install mingw -y` para Windows)
 
 ## Instalação
 
@@ -23,12 +24,12 @@ pip install -r requirements.txt
 
 ## Como executar
 
-O script principal de execução é `main.py`, que pode ser chamado diretamente via Python ou usando o script em lote `run_t4.bat`.
+O script principal de execução é `main.py`, que pode ser chamado diretamente via Python ou usando o script em lote `run_t5.bat`.
 
-### Usando o `run_t4.bat`
+### Usando o `run_t5.bat`
 
 ```bash
-run_t4.bat <arquivo_de_entrada.txt> <arquivo_de_saida.txt>
+run_t5.bat <arquivo_de_entrada.txt> <arquivo_de_saida.txt>
 ```
 
 ### Execução direta no Python
@@ -37,14 +38,15 @@ run_t4.bat <arquivo_de_entrada.txt> <arquivo_de_saida.txt>
 python main.py <arquivo_de_entrada.txt> <arquivo_de_saida.txt>
 ```
 
-## Estrutura do Analisador
+## Estrutura do Gerador de Código
 
-Diferentemente do T3, o T4 adiciona análises contextuais e checagem de tipos profundas sobre elementos complexos da linguagem LA:
+O T5 adiciona a geração de código C de alto desempenho após todas as validações léxicas, sintáticas e semânticas das etapas anteriores:
 
-- **Registros (Structs)**: Mapeamento de sub-escopos contendo as propriedades e tipos das variáveis internas do registro. Suporte à resolução dinâmica recursiva de expressões de acesso como `ponto1.x`.
-- **Arrays**: Varredura semântica para indexação de expressões dentro dos colchetes, resolvendo o tipo base para atribuições do tipo `valor[0]`.
-- **Funções e Procedimentos**: O `SemanticVisitor` armazena a lista ordenada e os tipos específicos dos parâmetros formais e o tipo de retorno. Toda chamada exige a compatibilidade estrita da assinatura do método (`check_function_call`).
-- **Validação de Retorno**: Verifica semanticamente o escopo no qual a palavra-chave `retorne` é utilizada, acusando erro fora de contextos de função.
-- **Ponteiros**: Implementação dos operadores de endereço (`&`) e desreferenciamento (`^`), garantindo as regras rígidas de tipagem dos endereços.
-- **`SymbolTable.py`**: Suporta o rastreamento avançado de tipos customizados, assinatura de sub-rotinas e registros.
-- **`SemanticVisitor.py`**: Ponto central da lógica não bloqueante, acumulando e relatando múltiplos erros semânticos até o fim da execução.
+- **`CodeGeneratorVisitor.py`**: O visitor que percorre a árvore sintática válida e traduz todos os comandos para C de forma equivalente.
+- **Tabela de Símbolos Leve**: Usada para reter os tipos de variáveis e parâmetros locais durante a tradução de sub-rotinas e comandos de escrita/leitura.
+- **Tradução Estruturada**:
+  - Variáveis básicas, ponteiros, registros (`struct`) e tipos customizados (`typedef struct`).
+  - Blocos condicionais (`if`, `switch` expandido).
+  - Laços de repetição (`for`, `while`, `do-while`).
+  - Funções (`return` e assinaturas tipadas) e Procedimentos (`void`).
+  - Chamadas de I/O estruturadas (`printf` com especificadores inteligentes, `scanf`, `gets`, `strcpy`).
