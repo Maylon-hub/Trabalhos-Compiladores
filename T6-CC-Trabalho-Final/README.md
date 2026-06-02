@@ -2,10 +2,10 @@
 
 Este projeto implementa a **PixelArtDSL**, uma Linguagem de Domínio Específico (DSL) declarativa focada na criação e renderização de pixel arts vetoriais de alta resolução via HTML/SVG. Foi desenvolvido como o Trabalho Final (T6) da disciplina de Compiladores (DC/UFSCar).
 
-## Membros do Grupo
+## Integrantes do Grupo
 
-- Maylon Martins de Melo - RA 800199
-- Eduardo Eudoro Lemos de Oliveira - RA 824757
+* Eduardo Eudoro Lemos de Oliveira - RA 824757
+* Maylon Martins de Melo - RA 800199
 
 ## Demonstração (Pitch de Vendas)
 

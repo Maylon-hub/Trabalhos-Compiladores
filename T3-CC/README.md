@@ -1,6 +1,11 @@
-# Compilador LA - Analisador Semântico (T3)
+# T3 - Compilador LA (Analisador Semântico)
 
 Este projeto implementa o Analisador Semântico para a Linguagem Algorítmica (LA), desenvolvido como parte do Trabalho 3 da disciplina de Compiladores (DC/UFSCar).
+
+## Integrantes do Grupo
+
+* Eduardo Eudoro Lemos de Oliveira - RA 824757
+* Maylon Martins de Melo - RA 800199
 
 ## Dependências
 

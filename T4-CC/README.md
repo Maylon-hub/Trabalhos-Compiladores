@@ -1,11 +1,11 @@
-# Compilador LA - Analisador Semântico Avançado (T4)
+# T4 - Compilador LA (Analisador Semântico Avançado)
 
 Este projeto implementa o Analisador Semântico Avançado para a Linguagem Algorítmica (LA), desenvolvido como parte do Trabalho 4 da disciplina de Compiladores (DC/UFSCar).
 
 ## Membros do Grupo
 
-- Maylon Martins de Melo - RA 800199
 - Eduardo Eudoro Lemos de Oliveira - RA 824757
+- Maylon Martins de Melo - RA 800199
 
 ## Dependências
 

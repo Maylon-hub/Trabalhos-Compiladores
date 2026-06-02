@@ -2,6 +2,11 @@
 
 Este diretório contém a implementação do Analisador Sintático para a linguagem LA, desenvolvida como o Trabalho 2 da disciplina de Construção de Compiladores.
 
+## Integrantes do Grupo
+
+* Eduardo Eudoro Lemos de Oliveira - RA 824757
+* Maylon Martins de Melo - RA 800199
+
 ## Estrutura de Arquivos
 
 - `LA.g4`: Definição da gramática (Regras Léxicas e Sintáticas) em formato ANTLR4.
