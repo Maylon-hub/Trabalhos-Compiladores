@@ -54,11 +54,11 @@ class CodeGeneratorVisitor(PixelArtVisitor):
         self.output.append("    <title>PixelArtDSL Render</title>")
         self.output.append("    <style>")
         self.output.append("        body { background: #121214; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: system-ui, -apple-system, sans-serif; }")
-        self.output.append("        svg { shape-rendering: crispEdges; border: 4px solid #1f1f23; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); width: 80vmin; height: 80vmin; background-color: #1e1e1e; }")
+        self.output.append("        #pixelart-canvas { shape-rendering: crispEdges; border: 4px solid #1f1f23; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); width: 80vmin; height: 80vmin; background-color: #1e1e1e; }")
         self.output.append("    </style>")
         self.output.append("</head>")
         self.output.append("<body>")
-        self.output.append(f'    <svg viewBox="0 0 {self.canvas_width} {self.canvas_height}" xmlns="http://www.w3.org/2000/svg">')
+        self.output.append(f'    <svg id="pixelart-canvas" viewBox="0 0 {self.canvas_width} {self.canvas_height}" xmlns="http://www.w3.org/2000/svg">')
         self.output.append(f'        <rect width="{self.canvas_width}" height="{self.canvas_height}" fill="{self.bg_color}" />')
 
         # 5. Process draw
