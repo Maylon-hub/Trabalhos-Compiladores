@@ -5,7 +5,12 @@
 		},
 		{
 			"path": "../cursocompiladores"
+		},
+		{
+			"path": "H:/Meu Drive/Shared Fold UFSCar/BCC/2026-1/CC - Lucredio"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.wordBreak": "keepAll"
+	}
 }

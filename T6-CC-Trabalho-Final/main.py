@@ -1,4 +1,5 @@
 import sys
+import os
 from antlr4 import *
 from PixelArtLexer import PixelArtLexer
 from PixelArtParser import PixelArtParser
@@ -31,8 +32,6 @@ def main(argv):
     # Análise Léxica
     lexer = PixelArtLexer(input_stream)
     
-    # Vamos fazer uma varredura léxica para erros
-    # Diferente do LA, vamos usar o ErrorListener do ANTLR para capturar lexer errors tbm se precisarmos
     lexer.removeErrorListeners()
     error_listener = MyErrorListener()
     lexer.addErrorListener(error_listener)
@@ -55,7 +54,8 @@ def main(argv):
         return
 
     # Análise Semântica
-    semantic_visitor = SemanticVisitor()
+    base_dir = os.path.dirname(os.path.abspath(input_file))
+    semantic_visitor = SemanticVisitor(base_dir=base_dir)
     semantic_visitor.visit(tree)
 
     # Se houver erros semânticos, reporta e para
@@ -66,8 +66,16 @@ def main(argv):
             f.write("Fim da compilacao\n")
         return
 
+    # Imprimir avisos no terminal
+    if semantic_visitor.warnings:
+        print("\nAvisos de compilacao:")
+        for warn in semantic_visitor.warnings:
+            print(f"  [Aviso] {warn}")
+        print()
+
     # Geração de Código
-    code_generator = CodeGeneratorVisitor()
+    code_generator = CodeGeneratorVisitor(base_dir=base_dir)
+    code_generator.warnings = semantic_visitor.warnings
     html_output = code_generator.visit(tree)
 
     # Gravar a saída

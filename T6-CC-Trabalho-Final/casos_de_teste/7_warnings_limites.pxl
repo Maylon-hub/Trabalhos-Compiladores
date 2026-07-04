@@ -1,0 +1,17 @@
+canvas 32 x 32 background #1E1E1E
+
+palette {
+    red = #FF5555
+}
+
+shape large_square {
+    rect (0, 0) to (10, 10) red
+}
+
+draw {
+    // 1. Um circulo saindo do limite (gerara aviso de limites)
+    circle (2, 2) 5 red
+    
+    // 2. Um shape que sai do canvas apos ser posicionado (gerara aviso de limites)
+    drawShape large_square at (28, 28)
+}

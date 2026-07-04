@@ -14,6 +14,11 @@ class PixelArtVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PixelArtParser#definicaoImport.
+    def visitDefinicaoImport(self, ctx:PixelArtParser.DefinicaoImportContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PixelArtParser#definicaoCanvas.
     def visitDefinicaoCanvas(self, ctx:PixelArtParser.DefinicaoCanvasContext):
         return self.visitChildren(ctx)
@@ -26,6 +31,11 @@ class PixelArtVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by PixelArtParser#definicaoCor.
     def visitDefinicaoCor(self, ctx:PixelArtParser.DefinicaoCorContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PixelArtParser#definicaoShape.
+    def visitDefinicaoShape(self, ctx:PixelArtParser.DefinicaoShapeContext):
         return self.visitChildren(ctx)
 
 
@@ -56,6 +66,46 @@ class PixelArtVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by PixelArtParser#cmdCircle.
     def visitCmdCircle(self, ctx:PixelArtParser.CmdCircleContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PixelArtParser#cmdEllipse.
+    def visitCmdEllipse(self, ctx:PixelArtParser.CmdEllipseContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PixelArtParser#cmdStar.
+    def visitCmdStar(self, ctx:PixelArtParser.CmdStarContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PixelArtParser#cmdTriangle.
+    def visitCmdTriangle(self, ctx:PixelArtParser.CmdTriangleContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PixelArtParser#cmdSquare.
+    def visitCmdSquare(self, ctx:PixelArtParser.CmdSquareContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PixelArtParser#cmdRhombus.
+    def visitCmdRhombus(self, ctx:PixelArtParser.CmdRhombusContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PixelArtParser#cmdBrazilFlag.
+    def visitCmdBrazilFlag(self, ctx:PixelArtParser.CmdBrazilFlagContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PixelArtParser#cmdDrawShape.
+    def visitCmdDrawShape(self, ctx:PixelArtParser.CmdDrawShapeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PixelArtParser#shapeModifier.
+    def visitShapeModifier(self, ctx:PixelArtParser.ShapeModifierContext):
         return self.visitChildren(ctx)
 
 

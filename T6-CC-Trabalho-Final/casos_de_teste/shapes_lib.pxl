@@ -1,0 +1,31 @@
+palette {
+    white = #FFFFFF
+    black = #000000
+    red = #FF5555
+    blue = #8BE9FD
+    yellow = #F1FA8C
+}
+
+shape eye {
+    ellipse center (0,0) rx 2 ry 1 white
+    pixel (0,0) black
+}
+
+shape smiley {
+    circle center (0,0) radius 6 yellow
+    // Olhos
+    drawShape eye at (-2, -2)
+    drawShape eye at (2, -2) flip horizontal
+    // Boca
+    line (-3, 2) to (3, 2) red
+    pixel (-4, 1) red
+    pixel (4, 1) red
+}
+
+shape star_red {
+    star center (0,0) radius 4 points 5 red
+}
+
+shape rhombus_blue {
+    rhombus center (0,0) width 6 height 10 blue
+}

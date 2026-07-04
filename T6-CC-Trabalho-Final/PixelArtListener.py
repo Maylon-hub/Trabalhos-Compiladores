@@ -17,6 +17,15 @@ class PixelArtListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PixelArtParser#definicaoImport.
+    def enterDefinicaoImport(self, ctx:PixelArtParser.DefinicaoImportContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#definicaoImport.
+    def exitDefinicaoImport(self, ctx:PixelArtParser.DefinicaoImportContext):
+        pass
+
+
     # Enter a parse tree produced by PixelArtParser#definicaoCanvas.
     def enterDefinicaoCanvas(self, ctx:PixelArtParser.DefinicaoCanvasContext):
         pass
@@ -41,6 +50,15 @@ class PixelArtListener(ParseTreeListener):
 
     # Exit a parse tree produced by PixelArtParser#definicaoCor.
     def exitDefinicaoCor(self, ctx:PixelArtParser.DefinicaoCorContext):
+        pass
+
+
+    # Enter a parse tree produced by PixelArtParser#definicaoShape.
+    def enterDefinicaoShape(self, ctx:PixelArtParser.DefinicaoShapeContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#definicaoShape.
+    def exitDefinicaoShape(self, ctx:PixelArtParser.DefinicaoShapeContext):
         pass
 
 
@@ -95,6 +113,78 @@ class PixelArtListener(ParseTreeListener):
 
     # Exit a parse tree produced by PixelArtParser#cmdCircle.
     def exitCmdCircle(self, ctx:PixelArtParser.CmdCircleContext):
+        pass
+
+
+    # Enter a parse tree produced by PixelArtParser#cmdEllipse.
+    def enterCmdEllipse(self, ctx:PixelArtParser.CmdEllipseContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#cmdEllipse.
+    def exitCmdEllipse(self, ctx:PixelArtParser.CmdEllipseContext):
+        pass
+
+
+    # Enter a parse tree produced by PixelArtParser#cmdStar.
+    def enterCmdStar(self, ctx:PixelArtParser.CmdStarContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#cmdStar.
+    def exitCmdStar(self, ctx:PixelArtParser.CmdStarContext):
+        pass
+
+
+    # Enter a parse tree produced by PixelArtParser#cmdTriangle.
+    def enterCmdTriangle(self, ctx:PixelArtParser.CmdTriangleContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#cmdTriangle.
+    def exitCmdTriangle(self, ctx:PixelArtParser.CmdTriangleContext):
+        pass
+
+
+    # Enter a parse tree produced by PixelArtParser#cmdSquare.
+    def enterCmdSquare(self, ctx:PixelArtParser.CmdSquareContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#cmdSquare.
+    def exitCmdSquare(self, ctx:PixelArtParser.CmdSquareContext):
+        pass
+
+
+    # Enter a parse tree produced by PixelArtParser#cmdRhombus.
+    def enterCmdRhombus(self, ctx:PixelArtParser.CmdRhombusContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#cmdRhombus.
+    def exitCmdRhombus(self, ctx:PixelArtParser.CmdRhombusContext):
+        pass
+
+
+    # Enter a parse tree produced by PixelArtParser#cmdBrazilFlag.
+    def enterCmdBrazilFlag(self, ctx:PixelArtParser.CmdBrazilFlagContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#cmdBrazilFlag.
+    def exitCmdBrazilFlag(self, ctx:PixelArtParser.CmdBrazilFlagContext):
+        pass
+
+
+    # Enter a parse tree produced by PixelArtParser#cmdDrawShape.
+    def enterCmdDrawShape(self, ctx:PixelArtParser.CmdDrawShapeContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#cmdDrawShape.
+    def exitCmdDrawShape(self, ctx:PixelArtParser.CmdDrawShapeContext):
+        pass
+
+
+    # Enter a parse tree produced by PixelArtParser#shapeModifier.
+    def enterShapeModifier(self, ctx:PixelArtParser.ShapeModifierContext):
+        pass
+
+    # Exit a parse tree produced by PixelArtParser#shapeModifier.
+    def exitShapeModifier(self, ctx:PixelArtParser.ShapeModifierContext):
         pass
 
 

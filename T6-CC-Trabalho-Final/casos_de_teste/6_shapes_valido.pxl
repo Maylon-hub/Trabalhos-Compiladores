@@ -1,0 +1,28 @@
+import "shapes_lib.pxl"
+
+canvas 64 x 64 background #1E1E1E
+
+palette {
+    green = #50FA7B
+    purple = #BD93F9
+    pink = #FF79C6
+}
+
+draw {
+    // 1. Testando os novos comandos primitivos geométricos (sintaxe simplificada e normal)
+    triangle (5, 5) (15, 5) (10, 15) pink
+    square center (10, 25) size 8 purple
+    square (5, 35) 6 green
+    rhombus (10, 50) 8 12 pink
+    
+    // 2. Testando bandeira do Brasil na copa!
+    brazilFlag (25, 5) 20
+    
+    // 3. Instanciando shapes da biblioteca shapes_lib.pxl
+    drawShape smiley at (45, 15)
+    drawShape smiley at (45, 35) rotate 90
+    drawShape smiley at (45, 55) flip vertical
+    
+    drawShape star_red at (25, 40)
+    drawShape rhombus_blue at (25, 55) rotate 45
+}

@@ -23,3 +23,13 @@ echo ==== Testando 5_erro_fora_limites.pxl ====
 python main.py casos_de_teste\5_erro_fora_limites.pxl casos_de_teste\5_erro_fora_limites.out
 type casos_de_teste\5_erro_fora_limites.out
 echo.
+
+echo ==== Testando 6_shapes_valido.pxl ====
+python main.py casos_de_teste\6_shapes_valido.pxl casos_de_teste\6_shapes_valido.html
+echo Saida gerada em casos_de_teste\6_shapes_valido.html
+echo.
+
+echo ==== Testando 7_warnings_limites.pxl ====
+python main.py casos_de_teste\7_warnings_limites.pxl casos_de_teste\7_warnings_limites.html
+echo Saida gerada em casos_de_teste\7_warnings_limites.html
+echo.
