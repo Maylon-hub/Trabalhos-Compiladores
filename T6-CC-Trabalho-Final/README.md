@@ -2,6 +2,8 @@
 
 Este projeto implementa a **PixelArtDSL**, uma Linguagem de Domínio Específico (DSL) declarativa focada na criação e renderização de pixel arts vetoriais de alta resolução via HTML/SVG. O compilador foi desenvolvido como o Trabalho Final (T6) da disciplina de Compiladores (DC/UFSCar).
 
+# Vídeo explicativo: https://drive.google.com/file/d/1sSVyHeAKLGVKMLyPW7AtVIlR6YELJ8lH/view?usp=sharing
+
 ## Integrantes do Grupo
 
 * Eduardo Eudoro Lemos de Oliveira - RA 824757
